@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #2D2E31;
+  --accent-color: orange;
+  --light-bg: #f2f2f2;
+  --dark-bg: #343a40;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  text-shadow: 2px 2px 2px #999;
+}
+
+header h1:hover {
+  text-shadow: 2px 2px 2px var(--accent-color);
+}
+
+.navbar {
+  background-color: white !important;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+.sidebar {
+  background-color: white;
+  padding: 1rem;
+  border-right: 1px solid #dee2e6;
+  height: 100%;
+}
+
+.map {
+  height: 80vh;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map:hover {
+  box-shadow: 1px 1px 1px 1px var(--accent-color);
+}
+
+.form-select, label, select, input, textarea {
+  background-color: #fff;
+  color: var(--primary-color);
+  padding: 12px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  font-size: 14px;
+}
+
+.form-select:hover, input:hover, select:hover, textarea:hover {
+  box-shadow: 1px 1px 1px 1px var(--accent-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.85;
+  box-shadow: 1px 1px 1px 1px var(--accent-color);
+}
+
+.footer {
+  background-color: var(--dark-bg);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel-item img {
+  height: 75vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.hover-shadow-lg {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-shadow-lg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
