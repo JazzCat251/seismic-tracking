@@ -1,0 +1,1 @@
+Seismic Tracker is a web-based application that visualizes live earthquake activity using real-time data from the USGS Earthquake API. Built with HTML, CSS, and modern JavaScript, it features an interactive Leaflet map, filtering by time and magnitude.
