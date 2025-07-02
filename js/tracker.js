@@ -28,10 +28,14 @@ class EarthquakeMap {
       'Reset': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { noWrap: true }),
       'Dark': L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { noWrap: true }),
       // Esri World Imagery for Satellite
-      'Satellite': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}', {
-        attribution: 'Tiles © Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-        noWrap: true
+      'Satellite': L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 19,
+        noWrap: true,
+        detectRetina: true,
+        attribution: 'Tiles © Esri — Source: Esri, Earthstar Geographics'
       })
+
+
     };
     this.currentTileLayer = this.tileLayers['Reset'].addTo(this.map);
     this.earthquakeData = [];
